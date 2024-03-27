@@ -31,7 +31,7 @@ func variasNotas(nota, numNotas int) {
 
 func saque(valorSaque int) {
 	if valorSaque < 2 {
-		fmt.Println("O valor do saque precisa ser a partir de R$2,00. Tente novamente.")
+		fmt.Println("Valor indisponível para saque. O valor precisa ser a partir de R$2,00. Tente novamente.")
 		return
 	}
 
@@ -43,13 +43,13 @@ func saque(valorSaque int) {
 		if numNotas == 1 {
 			umaNota(nota, numNotas)
 			valorSaque %= nota
-		} else if numNotas > 0 && numNotas != 1 {
+		} else if numNotas >= 2 {
 			variasNotas(nota, numNotas)
 			valorSaque %= nota
 		}
 	}
 	if valorSaque != 0 {
-		fmt.Printf("O saldo atual da sua conta no valor de R$%d,00 não poderá ser sacado, pois, as notas disponíveis são de R$2,00 em diante.", valorSaque)
+		fmt.Printf("O saldo restante da sua conta no valor de R$%d,00 não poderá ser sacado no momento, pois, as notas disponíveis são de R$2,00 em diante.", valorSaque)
 	}
 }
 
