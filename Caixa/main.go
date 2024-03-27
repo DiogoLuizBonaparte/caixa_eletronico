@@ -6,7 +6,6 @@ func valDigitado() int {
 	var input int
 	fmt.Printf("Digite o valor a ser sacado ")
 	fmt.Scanln(&input)
-
 	return input
 }
 
@@ -22,12 +21,11 @@ func getNotas() [7]int {
 	return notas
 }
 
-func umaNota(nota int, numNotas int) {
+func umaNota(nota, numNotas int) {
 	fmt.Printf("%d nota de R$%d,00\n", numNotas, nota)
-
 }
 
-func variasNotas(nota int, numNotas int) {
+func variasNotas(nota, numNotas int) {
 	fmt.Printf("%d notas de R$%d,00\n", numNotas, nota)
 }
 
@@ -51,9 +49,8 @@ func saque(valorSaque int) {
 		}
 	}
 	if valorSaque != 0 {
-		fmt.Printf("O saldo atual da sua conta no valor de R$%d,00 não pode ser sacado, pois, as notas disponíveis são de R$2,00 em diante.", valorSaque)
+		fmt.Printf("O saldo atual da sua conta no valor de R$%d,00 não poderá ser sacado, pois, as notas disponíveis são de R$2,00 em diante.", valorSaque)
 	}
-
 }
 
 func main() {
